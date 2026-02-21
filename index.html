@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomOS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <nav class="taskBar">
+            <img src="penguin.png" alt="little linux penguin" class="homeButton" onclick="mainMenu()">
+
+            <ul class="taskList">
+                <li>File</li>
+                <li>Edit</li>
+                <li>View</li>
+                <li>Label</li>
+                <li>Special</li>
+            </ul>
+            <p class="datetime"></p>
+        </nav>
+
+        <div class="mainMenu" style="display: none;">
+
+            <div class="menuContent">
+                <p class="menuText center">About this workstation...</p>
+
+                <ul class="menuList">
+                    <li> <img class="listIMG" src="terminal.png" alt=""> <p>Terminal</p></li>
+                    <li> <img class="listIMG" src="texteditor.png" alt=""><p>Editor</p></li>
+                    <li> <img class="listIMG" src="calculator.png" alt=""><p>Calculator</p></li>
+                    <li> <img class="listIMG" src="retro-logo.png" alt=""><p>Apps</p></li>
+                </ul>
+                
+                
+                
+                
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+
+</body>
+<script defer src="app.js"></script>
+<script defer src="date.js"></script>
+
+</html>
