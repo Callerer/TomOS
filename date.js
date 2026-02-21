@@ -7,7 +7,18 @@ function showDate() {
     let d = new Date();
     let monthd = month[d.getMonth()];
     let day = weekday[d.getDay()];
-    document.querySelector(".datetime").innerHTML = day + " " + d.getDay() + " " + monthd + " " + d.getFullYear() + " | " + d.getHours() + ":" + d.getMinutes()
+    let hour = d.getHours();
+    let minute = d.getMinutes();
+
+    if (minute <= 9) {
+        minute = "0" + minute;
+    }
+
+    if (hour <= 9) {
+        hour = "0" + hour;
+    }
+
+    document.querySelector(".datetime").innerHTML = day + " " + d.getDay() + " " + monthd + " " + d.getFullYear() + " | " + hour + ":" + minute
 }
 
 showDate();

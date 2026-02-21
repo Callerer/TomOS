@@ -13,3 +13,27 @@ function mainMenu() {
 
 }
 
+function closethis(that){
+that.parentNode.parentNode.style = "display: none;";
+}
+
+function closethisapp(that){
+that.parentNode.style.display = "none"
+}
+
+function openApp(variable){
+    
+    switch (variable) {
+        case "terminal":
+            document.querySelector(".terminal").style.display = "flex"
+            break;
+            case "texteditor":
+            document.querySelector(".texteditor").style.display = "flex"
+            break;
+        default:
+            break;
+    }
+
+
+}
+
