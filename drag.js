@@ -2,4 +2,4 @@ class Draggable{#a;constructor(e){this.#a=e}load(e){let t,l,n,a={};Draggable.eve
 new Draggable(document.querySelector(".welcomeCard")).load();
 new Draggable(document.querySelector(".terminal")).load();
 new Draggable(document.querySelector(".texteditor")).load();
-
+new Draggable(document.querySelector(".calc")).load();

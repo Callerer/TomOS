@@ -13,22 +13,25 @@ function mainMenu() {
 
 }
 
-function closethis(that){
-that.parentNode.parentNode.style = "display: none;";
+function closethis(that) {
+    that.parentNode.parentNode.style = "display: none;";
 }
 
-function closethisapp(that){
-that.parentNode.style.display = "none"
+function closethisapp(that) {
+    that.parentNode.style.display = "none"
 }
 
-function openApp(variable){
-    
+function openApp(variable) {
+
     switch (variable) {
         case "terminal":
             document.querySelector(".terminal").style.display = "flex"
             break;
-            case "texteditor":
+        case "texteditor":
             document.querySelector(".texteditor").style.display = "flex"
+            break;
+        case "calc":
+            document.querySelector(".calc").style.display = "flex"
             break;
         default:
             break;
@@ -37,3 +40,13 @@ function openApp(variable){
 
 }
 
+function typeCalc(that){
+    let calcArea = document.querySelector(".calcArea")
+    calcArea.innerHTML += that;
+}
+
+function calculate(){
+    let calcArea = document.querySelector(".calcArea")
+    let calculation = eval(calcArea.innerHTML);
+    calcArea.innerHTML = calculation;
+}

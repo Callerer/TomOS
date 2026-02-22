@@ -19,7 +19,8 @@
         <div class="welcomeCard">
             <div class="closeButton" onclick="closethis(this)">X</div>
             <h1 class="welcomeHeader">Welcome to TomOS</h1>
-            <p class="welcomeParagraph">As you could've guessed my name is tom and my biggest passion is programming i currently code in the
+            <p class="welcomeParagraph">As you could've guessed my name is tom and my biggest passion is programming i
+                currently code in the
                 following languages:
             <ul class="welcomeList">
                 <li>JavaScript</li>
@@ -60,7 +61,7 @@
                     <li onclick="openApp('texteditor')"> <img class="listIMG" src="texteditor.png" alt="">
                         <p>Editor</p>
                     </li>
-                    <li> <img class="listIMG" src="calculator.png" alt="">
+                    <li onclick="openApp('calc')"> <img class="listIMG" src="calculator.png" alt="">
                         <p>Calculator</p>
                     </li>
                     <li> <img class="listIMG" src="retro-logo.png" alt="">
@@ -77,26 +78,51 @@
 
         </div>
 
-    <div class="appContainer">
+        <div class="appContainer">
 
-        <div class="terminal" style="display: none;">
-            <div class="closeButton" onclick="closethisapp(this)">X</div>
-            <textarea type="text">tom@TomOS</textarea>
-        </div>
+            <div class="terminal" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+                <textarea type="text">tom@TomOS</textarea>
+            </div>
 
-                <div class="texteditor" style="display: none;">
-            <div class="closeButton" onclick="closethisapp(this)">X</div>
-            <textarea type="text">Hello world!</textarea>
+            <div class="texteditor" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+                <textarea type="text">Hello world!</textarea>
+            </div>
+
+            <div class="calc" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+                <textarea class="calcArea" type="text"></textarea>
+
+                <div class="calcButtons">
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">1</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">2</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">3</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">*</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">4</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">5</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">6</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">/</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">7</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">8</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">9</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">+</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">00</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">0</button>
+                    <button class="calcButton" onclick="calculate()">=</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">-</button> 
+                </div>
+            </div>
+
+
         </div>
 
     </div>
 
-    </div>
 
-
-<script defer src="app.js"></script>
-<script defer src="date.js"></script>
-<script src="drag.js" defer></script>
+    <script defer src="app.js"></script>
+    <script defer src="date.js"></script>
+    <script src="drag.js" defer></script>
 </body>
 
 

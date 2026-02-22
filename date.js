@@ -18,8 +18,9 @@ function showDate() {
         hour = "0" + hour;
     }
 
-    document.querySelector(".datetime").innerHTML = day + " " + d.getDay() + " " + monthd + " " + d.getFullYear() + " | " + hour + ":" + minute
+    document.querySelector(".datetime").innerHTML = day + " " + d.getDate() + " " + monthd + " " + d.getFullYear() + " | " + hour + ":" + minute
 }
 
 showDate();
 var t = setInterval(showDate, 1000);
+
