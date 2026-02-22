@@ -48,6 +48,9 @@ function openApp(variable) {
         case "tictactoe":
             document.querySelector(".tictactoe").style.display = "flex"
             break;
+        case "settings":
+            document.querySelector(".settings").style.display = "flex"
+            break;
         default:
             break;
     }
@@ -77,4 +80,45 @@ function resizeMenu() {
         mainMenu.className = "mainMenu"
         extralist.style.display = "none";
     }
+}
+
+function changeImage(source){
+let main = document.querySelector(".main")
+main.style = `
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(122, 41, 122);
+    background-image: url("${source}");
+    background-size: cover;
+    background-position: center;
+`
+}
+
+function changeColor(that){
+
+    let colorclass = that.dataset.color;
+    console.log("function activated color: " + colorclass)
+let main = document.querySelector(".main")
+main.style = `
+    min-height: 100vh;
+    width: 100%;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+`
+main.className = `main ${colorclass}`
+}
+
+function openSetting(that){
+console.log(that);
+
+switch (that) {
+    case "Background":
+        document.querySelector(".settingStartMenu").style.display = "none";
+        document.querySelector(".settingBackgroundMenuContainer").style.display = "block";
+        break;
+
+    default:
+        break;
+}
 }

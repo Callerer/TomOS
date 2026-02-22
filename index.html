@@ -43,6 +43,7 @@
 
             <ul class="taskList">
                 <li onclick="openApp('filesystem')">File</li>
+                <li onclick="openApp('settings')">Settings</li>
                 <!-- <li>Edit</li>
                 <li>View</li>
                 <li>Label</li> -->
@@ -57,8 +58,9 @@
         <div class="mainMenu" style="display: none;">
 
             <div class="menuContent">
-                <p onclick="openApp('aboutWorkstation')" onmouseover="this.style.color = 'black'" onmouseleave="this.style.color = 'rgba(0, 0, 0, 0.384)'"
-                        style="color: rgba(0, 0, 0, 0.384);" class="menuText center">About this workstation...</p>
+                <p onclick="openApp('aboutWorkstation')" onmouseover="this.style.color = 'black'"
+                    onmouseleave="this.style.color = 'rgba(0, 0, 0, 0.384)'" style="color: rgba(0, 0, 0, 0.384);"
+                    class="menuText center">About this workstation...</p>
 
                 <ul class="menuList">
                     <li onclick="openApp('terminal')"> <img class="listIMG" src="terminal.png" alt="">
@@ -152,8 +154,8 @@
                 <div class="closeButton" onclick="closethisapp(this)">X</div>
                 <p>sadly i couldn't find a search engine that allows iframing yet!</p>
 
-                <iframe src="https://tomwebsites.nl"
-                    style="border:none; width:80%; height:80%;" title="DuckDuckGo Search">
+                <iframe src="https://tomwebsites.nl" style="border:none; width:80%; height:80%;"
+                    title="DuckDuckGo Search">
                 </iframe>
 
 
@@ -256,6 +258,46 @@
                     <div class="board" id="board" aria-label="Tic tac toe board"></div>
                 </div>
 
+            </div>
+
+            <div class="settings" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+
+                <div class="settingStartMenu" style="display: flex;">
+                    Settings | Please choose an option to configure
+
+                    <ul class="settingsList">
+                        <li onclick="openSetting(this.innerHTML)" class="settingsListItem">Background</li>
+                        <li onclick="openSetting(this.innerHTML)" class="settingsListItem">Logo</li>
+                        <li onclick="openSetting(this.innerHTML)" class="settingsListItem">Custom css</li>
+                    </ul>
+                </div>
+
+                <div class="settingBackgroundMenuContainer" style="display: none;">
+                    <p class="settingName">Images:</p>
+                    <div class="settingBackgroundMenu">
+
+
+                        <img onclick="changeImage(this.src)" class="backgroundImageChoice" src="background1.webp" alt="">
+                        <img onclick="changeImage(this.src)" class="backgroundImageChoice" src="background2.jpg" alt="">
+                        <img onclick="changeImage(this.src)" class="backgroundImageChoice" src="background3.jpg" alt="">
+                        <img onclick="changeImage(this.src)" class="backgroundImageChoice" src="background4.jpg" alt="">
+                        <img onclick="changeImage(this.src)" class="backgroundImageChoice" src="background5.webp" alt="">
+                        <img onclick="changeImage(this.src)" class="backgroundImageChoice" src="background6.jpg" alt="">
+                    </div>
+
+                    <p class="settingName">Colors:</p>
+                    <div class="settingBackgroundMenu">
+
+
+                        <div onclick="changeColor(this)" data-color="color-1" class="backgroundImageChoice color-1"></div>
+                        <div onclick="changeColor(this)" data-color="color-2" class="backgroundImageChoice color-2"></div>
+                        <div onclick="changeColor(this)" data-color="color-3" class="backgroundImageChoice color-3"></div>
+                        <div onclick="changeColor(this)" data-color="color-4" class="backgroundImageChoice color-4"></div>
+                        <div onclick="changeColor(this)" data-color="color-5" class="backgroundImageChoice color-5"></div>
+                        <div onclick="changeColor(this)" data-color="color-6" class="backgroundImageChoice color-6"></div>
+                    </div>
+                </div>
             </div>
 
         </div>

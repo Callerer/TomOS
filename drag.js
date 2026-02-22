@@ -8,3 +8,4 @@ new Draggable(document.querySelector(".internet")).load();
 new Draggable(document.querySelector(".filesystem")).load();
 new Draggable(document.querySelector(".snake")).load();
 new Draggable(document.querySelector(".tictactoe")).load();
+new Draggable(document.querySelector(".settings")).load();
