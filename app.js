@@ -82,9 +82,9 @@ function resizeMenu() {
     }
 }
 
-function changeImage(source){
-let main = document.querySelector(".main")
-main.style = `
+function changeImage(source) {
+    let main = document.querySelector(".main")
+    main.style = `
     min-height: 100vh;
     width: 100%;
     background-color: rgb(122, 41, 122);
@@ -94,31 +94,47 @@ main.style = `
 `
 }
 
-function changeColor(that){
+function changeColor(that) {
 
     let colorclass = that.dataset.color;
     console.log("function activated color: " + colorclass)
-let main = document.querySelector(".main")
-main.style = `
+    let main = document.querySelector(".main")
+    main.style = `
     min-height: 100vh;
     width: 100%;
     background-image: none;
     background-size: cover;
     background-position: center;
 `
-main.className = `main ${colorclass}`
+    main.className = `main ${colorclass}`
 }
 
-function openSetting(that){
-console.log(that);
+function openSetting(that) {
+    console.log(that);
 
-switch (that) {
-    case "Background":
-        document.querySelector(".settingStartMenu").style.display = "none";
-        document.querySelector(".settingBackgroundMenuContainer").style.display = "block";
-        break;
-
-    default:
-        break;
+    switch (that) {
+        case "Background":
+            document.querySelector(".settingStartMenu").style.display = "none";
+            document.querySelector(".settingBackgroundMenuContainer").style.display = "block";
+            break;
+        case "Logo":
+            document.querySelector(".settingStartMenu").style.display = "none";
+            document.querySelector(".settingLogoMenuContainer").style.display = "block";
+            break;
+        default:
+            break;
+    }
 }
+
+function changeLogo(source){
+document.querySelector(".homeButton").src = source;
+}
+
+function settingMainMenu(parent){
+parent.style.display = "none"
+document.querySelector(".settingStartMenu").style.display = "flex"
+}
+
+function changeCSS(csstext){
+    document.querySelector("#customCSS").innerHTML = document.querySelector("#csstext").innerHTML
 }

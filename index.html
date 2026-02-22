@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -49,7 +48,7 @@
                 <li>Label</li> -->
                 <li><a onmouseover="this.style.color = 'black'" onmouseleave="this.style.color = 'rgba(0, 0, 0, 0.384)'"
                         style="color: rgba(0, 0, 0, 0.384);"
-                        href="https://tomwebsites-nl.translate.goog/blog.php/posts/5?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=nl">Special</a>
+                        href="https://tomwebsites-nl.translate.goog/index.html?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=nl">Special</a>
                 </li>
             </ul>
             <p class="datetime"></p>
@@ -269,11 +268,11 @@
                     <ul class="settingsList">
                         <li onclick="openSetting(this.innerHTML)" class="settingsListItem">Background</li>
                         <li onclick="openSetting(this.innerHTML)" class="settingsListItem">Logo</li>
-                        <li onclick="openSetting(this.innerHTML)" class="settingsListItem">Custom css</li>
                     </ul>
                 </div>
 
                 <div class="settingBackgroundMenuContainer" style="display: none;">
+                    <p onclick="settingMainMenu(this.parentNode)" class="settingName">Go back:</p>
                     <p class="settingName">Images:</p>
                     <div class="settingBackgroundMenu">
 
@@ -298,11 +297,28 @@
                         <div onclick="changeColor(this)" data-color="color-6" class="backgroundImageChoice color-6"></div>
                     </div>
                 </div>
+
+                <div class="settingLogoMenuContainer" style="display: none;">
+                    <p onclick="settingMainMenu(this.parentNode)" class="settingName">Go back:</p>
+                    <p class="settingName">Logo: </p>
+
+                    <div class="imageSettingBackgroundMenu">
+                        <img onclick="changeLogo(this.src)" class="logoImageChoice" src="logo1.png" alt="">
+                        <img onclick="changeLogo(this.src)" class="logoImageChoice" src="logo2.png" alt="">
+                        <img onclick="changeLogo(this.src)" class="logoImageChoice" src="logo3.png" alt="">
+                        <img onclick="changeLogo(this.src)" class="logoImageChoice" src="logo4.png" alt="">
+                        <img onclick="changeLogo(this.src)" class="logoImageChoice" src="logo5.png" alt="">
+                        <img onclick="changeLogo(this.src)" class="logoImageChoice" src="penguin.png" alt="">
+                    </div>
+                </div>
+
+
             </div>
 
         </div>
 
     </div>
+
 
 
     <script defer src="app.js"></script>

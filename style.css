@@ -302,9 +302,10 @@
     justify-content: center;
 }
 
-.internet iframe{
-margin-top: 25px;
+.internet iframe {
+    margin-top: 25px;
 }
+
 .filesystem {
     width: 900px;
     height: 600px;
@@ -439,7 +440,7 @@ margin-top: 25px;
     background-color: rgba(0, 0, 0, 0.03);
 }
 
-.settings{
+.settings {
     width: 1100px;
     height: 700px;
     border: 3px solid;
@@ -450,29 +451,29 @@ margin-top: 25px;
     flex-direction: column;
 }
 
-.settingStartMenu{
+.settingStartMenu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.settingsList{
+.settingsList {
     font-size: 55px;
-    margin-top: 150px;
+    margin-top: 190px;
     list-style-type: none;
     text-align: center;
 }
 
-.settingsList li{
-color: rgba(0, 0, 0, 0.384);
+.settingsList li {
+    color: rgba(0, 0, 0, 0.384);
 }
 
-.settingsList li:hover{
-color: rgb(0, 0, 0);
+.settingsList li:hover {
+    color: rgb(0, 0, 0);
 }
 
-.settingBackgroundMenu{
+.settingBackgroundMenu {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -484,7 +485,7 @@ color: rgb(0, 0, 0);
     margin-bottom: 50px;
 }
 
-.backgroundImageChoice{
+.backgroundImageChoice {
     width: 30%;
     height: 200px;
     border: 3px solid black;
@@ -492,41 +493,93 @@ color: rgb(0, 0, 0);
     transition: 0.1s ease;
 }
 
-.backgroundImageChoice:hover{
-transform: translate(5px, 5px);
-box-shadow: 0px 0px 0px 0px black;
+.backgroundImageChoice:hover {
+    transform: translate(5px, 5px);
+    box-shadow: 0px 0px 0px 0px black;
 }
 
-.settingName{
+.settingName {
     margin-left: 25px;
     font-size: 25px;
     margin-bottom: 25px;
 }
 
-.settingBackgroundMenuContainer{
+.settingBackgroundMenuContainer {
     overflow: scroll;
 }
 
-.color-1{
-background-color: brown;
+.color-1 {
+    background-color: brown;
 }
 
-.color-2{
+.color-2 {
     background-color: aquamarine;
 }
 
-.color-3{
+.color-3 {
     background-color: cadetblue;
 }
 
-.color-4{
+.color-4 {
     background-color: darkgoldenrod;
 }
 
-.color-5{
+.color-5 {
     background-color: #7a297a;
 }
 
-.color-6{
-        background-color: green;
+.color-6 {
+    background-color: green;
+}
+
+.settingLogoMenuContainer {
+    overflow: scroll;
+}
+
+.imageSettingBackgroundMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.logoImageChoice {
+    width: 30%;
+    height: 300px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px 0px black;
+    transition: 0.1s ease;
+}
+
+.logoImageChoice:hover {
+    transform: translate(5px, 5px);
+    box-shadow: 0px 0px 0px 0px black;
+}
+
+.customCssBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.customCssBox textarea{
+width: 80%;
+height: 50%;
+}
+
+.coolbutton{
+    width: 200px;
+    height: 70px;
+    margin-top: 25px;
+    border-radius: 0px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px 0px black;
 }
