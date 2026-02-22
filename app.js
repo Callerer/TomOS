@@ -33,6 +33,21 @@ function openApp(variable) {
         case "calc":
             document.querySelector(".calc").style.display = "flex"
             break;
+        case "aboutWorkstation":
+            document.querySelector(".aboutWorkstation").style.display = "flex"
+            break;
+        case "internet":
+            document.querySelector(".internet").style.display = "flex"
+            break;
+        case "filesystem":
+            document.querySelector(".filesystem").style.display = "flex"
+            break;
+        case "snake":
+            document.querySelector(".snake").style.display = "flex"
+            break;
+        case "tictactoe":
+            document.querySelector(".tictactoe").style.display = "flex"
+            break;
         default:
             break;
     }
@@ -40,13 +55,26 @@ function openApp(variable) {
 
 }
 
-function typeCalc(that){
+function typeCalc(that) {
     let calcArea = document.querySelector(".calcArea")
     calcArea.innerHTML += that;
 }
 
-function calculate(){
+function calculate() {
     let calcArea = document.querySelector(".calcArea")
     let calculation = eval(calcArea.innerHTML);
     calcArea.innerHTML = calculation;
+}
+
+function resizeMenu() {
+    let mainMenu = document.querySelector(".mainMenu")
+    let extralist = document.querySelector(".extraMenuList")
+
+    if (mainMenu.className == "mainMenu") {
+        mainMenu.className = "mainMenu expanded"
+        extralist.style.display = "block";
+    } else {
+        mainMenu.className = "mainMenu"
+        extralist.style.display = "none";
+    }
 }

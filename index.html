@@ -27,6 +27,8 @@
                 <li>PHP</li>
                 <li>C#</li>
             </ul>
+
+            Try pressing the penguin on the top left and explore everything!
             </p>
         </div>
 
@@ -40,11 +42,14 @@
             <img src="penguin.png" alt="little linux penguin" class="homeButton" onclick="mainMenu()">
 
             <ul class="taskList">
-                <li>File</li>
-                <li>Edit</li>
+                <li onclick="openApp('filesystem')">File</li>
+                <!-- <li>Edit</li>
                 <li>View</li>
-                <li>Label</li>
-                <li>Special</li>
+                <li>Label</li> -->
+                <li><a onmouseover="this.style.color = 'black'" onmouseleave="this.style.color = 'rgba(0, 0, 0, 0.384)'"
+                        style="color: rgba(0, 0, 0, 0.384);"
+                        href="https://tomwebsites-nl.translate.goog/blog.php/posts/5?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=nl">Special</a>
+                </li>
             </ul>
             <p class="datetime"></p>
         </nav>
@@ -52,7 +57,8 @@
         <div class="mainMenu" style="display: none;">
 
             <div class="menuContent">
-                <p class="menuText center">About this workstation...</p>
+                <p onclick="openApp('aboutWorkstation')" onmouseover="this.style.color = 'black'" onmouseleave="this.style.color = 'rgba(0, 0, 0, 0.384)'"
+                        style="color: rgba(0, 0, 0, 0.384);" class="menuText center">About this workstation...</p>
 
                 <ul class="menuList">
                     <li onclick="openApp('terminal')"> <img class="listIMG" src="terminal.png" alt="">
@@ -64,9 +70,25 @@
                     <li onclick="openApp('calc')"> <img class="listIMG" src="calculator.png" alt="">
                         <p>Calculator</p>
                     </li>
-                    <li> <img class="listIMG" src="retro-logo.png" alt="">
-                        <p>Apps</p>
+                    <li onclick="openApp('internet')"> <img class="listIMG" src="internet.png" alt="">
+                        <p>Internet</p>
                     </li>
+                    <li onclick="resizeMenu()"> <img class="listIMG" src="games.png" alt="">
+                        <p>Games</p>
+                    </li>
+                </ul>
+
+                <ul class="extraMenuList" style="display: none;">
+
+                    <li onclick="openApp('snake')"> <img class="listIMG" src="snake.png" alt="">
+                        <p>Snake</p>
+                    </li>
+
+
+                    <li onclick="openApp('tictactoe')"> <img class="listIMG" src="tictactoe.png" alt="">
+                        <p>Tictactoe</p>
+                    </li>
+
                 </ul>
 
 
@@ -96,24 +118,145 @@
 
                 <div class="calcButtons">
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">1</button>
-                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">2</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">2</button>
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">3</button>
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">*</button>
-                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">4</button> 
-                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">5</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">4</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">5</button>
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">6</button>
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">/</button>
-                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">7</button> 
-                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">8</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">7</button>
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">8</button>
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">9</button>
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">+</button>
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">00</button>
                     <button class="calcButton" onclick="typeCalc(this.innerHTML)">0</button>
                     <button class="calcButton" onclick="calculate()">=</button>
-                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">-</button> 
+                    <button class="calcButton" onclick="typeCalc(this.innerHTML)">-</button>
+                </div>
+
+            </div>
+
+            <div class="aboutWorkstation" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+                <p class="aboutWorkstationHeader">About this workstation:</p>
+                <p>CPU: Intel Pentium 1</p>
+                <p>Ram: 16MB</p>
+                <p>Graphics card: S3 Trio64V+</p>
+                <p>Storage: 1.2 GB</p>
+                <p>Operating system: TomOS</p>
+
+            </div>
+
+            <div class="internet" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+                <p>sadly i couldn't find a search engine that allows iframing yet!</p>
+
+                <iframe src="https://tomwebsites.nl"
+                    style="border:none; width:80%; height:80%;" title="DuckDuckGo Search">
+                </iframe>
+
+
+            </div>
+
+
+            <div class="filesystem" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+                <p class="appNameText">Files</p>
+
+                <div class="filesystemContainer">
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>home</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>dev</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>etc</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>boot</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>bin</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>tmp</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>lib</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>usr</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>media</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>var</p>
+                    </div>
+
+
+                    <div class="fileContainer">
+                        <img class="fileIMG" src="folder.png" alt="">
+                        <p>mnt</p>
+                    </div>
                 </div>
             </div>
 
+            <div class="snake" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+
+                <div id="canvasDiv">
+                    <p>Press wasd to play | space to pause</p>
+                    <canvas id="snakeCanvas" width="300" height="300"></canvas>
+                </div>
+
+            </div>
+
+            <div class="tictactoe" style="display: none;">
+                <div class="closeButton" onclick="closethisapp(this)">X</div>
+                <p>tic tac toe </p>
+
+                <div class="wrap">
+                    <div class="row">
+                        <div class="status" id="status"></div>
+                        <button id="resetBtn" type="button">Reset</button>
+                    </div>
+
+                    <div class="board" id="board" aria-label="Tic tac toe board"></div>
+                </div>
+
+            </div>
 
         </div>
 
@@ -122,7 +265,10 @@
 
     <script defer src="app.js"></script>
     <script defer src="date.js"></script>
+    <script src="snakeScript.js"></script>
+    <script src="tictactoe.js"></script>
     <script src="drag.js" defer></script>
+    <script>game()</script>
 </body>
 
 

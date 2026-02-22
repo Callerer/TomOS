@@ -3,3 +3,8 @@ new Draggable(document.querySelector(".welcomeCard")).load();
 new Draggable(document.querySelector(".terminal")).load();
 new Draggable(document.querySelector(".texteditor")).load();
 new Draggable(document.querySelector(".calc")).load();
+new Draggable(document.querySelector(".aboutWorkstation")).load();
+new Draggable(document.querySelector(".internet")).load();
+new Draggable(document.querySelector(".filesystem")).load();
+new Draggable(document.querySelector(".snake")).load();
+new Draggable(document.querySelector(".tictactoe")).load();
